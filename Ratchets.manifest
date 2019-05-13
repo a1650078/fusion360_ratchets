@@ -1,10 +1,10 @@
 {
 	"autodeskProduct":	"Fusion360",
 	"type":	"addin",
-	"id":	"3b330997-dbbb-4cfa-8050-5ea0685a73a6",
-	"author":	"Patrick Rainsberry",
+	"id":	"ae03c42e-f515-4e57-b53f-a09a6c0716fc",
+	"author":	"Joseph Lawrie",
 	"description":	{
-		"":	"Easy Skeleton for a Fusion Addin"
+		"":	"Fast and easy ratchets wheels - there's no going back!"
 	},
 	"version":	"",
 	"runOnStartup":	false,
