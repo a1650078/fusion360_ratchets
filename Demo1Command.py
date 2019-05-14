@@ -55,7 +55,9 @@ class Demo1Command(Fusion360CommandBase):
 
         converted_value = ao.units_manager.formatInternalValue(the_value, 'in', True)
 
-        ao.ui.messageBox('The value, in internal units, you entered was:  {} \n'.format(the_value) +
+        ao.ui.messageBox("Hello Fusion360")
+        
+        ao.ui.messageBox('Thee value, in internal units, you entered was:  {} \n'.format(the_value) +
                          'The value, in inches, you entered was:  {} \n'.format(converted_value) +
                          'The boolean value checked was:  {} \n'.format(the_boolean) +
                          'The string you typed was:  {} \n'.format(the_string) +
