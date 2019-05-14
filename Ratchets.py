@@ -2,7 +2,6 @@
 # Could import multiple Command definitions here
 from .Demo1Command import Demo1Command
 from .Demo2Command import Demo2Command
-from .ReloadingCommand import create_reloading_command
 from .DemoPaletteCommand import DemoPaletteShowCommand, DemoPaletteSendCommand
 
 commands = []
@@ -16,7 +15,7 @@ cmd = {
     'cmd_resources': './resources',
     'workspace': 'FusionSolidEnvironment',
     'toolbar_panel_id': 'SolidScriptsAddinsPanel',
-    'class': create_reloading_command(Demo1Command)
+    'class': Demo1Command
 }
 command_definitions.append(cmd)
 
@@ -30,7 +29,7 @@ cmd = {
     'toolbar_panel_id': 'SolidCreatePanel',
     'command_visible': True,
     'command_promoted': True,
-    'class': create_reloading_command(Demo2Command)
+    'class': Demo2Command
 }
 command_definitions.append(cmd)
 
@@ -52,7 +51,7 @@ cmd = {
     'palette_is_resizable': True,
     'palette_width': 500,
     'palette_height': 600,
-    'class': create_reloading_command(DemoPaletteShowCommand)
+    'class': DemoPaletteShowCommand
 }
 command_definitions.append(cmd)
 
