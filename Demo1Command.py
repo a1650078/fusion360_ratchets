@@ -57,13 +57,29 @@ class Demo1Command(Fusion360CommandBase):
 
         ao.ui.messageBox("Hello Fusion360")
 
-        ao.ui.messageBox('Theett value, in internal units, you entered was:  {} \n'.format(the_value) +
+        ao.ui.messageBox(str(dir(ao)))
+
+        ao.ui.messageBox('The value, in internal units, you entered was:  {} \n'.format(the_value) +
                          'The value, in inches, you entered was:  {} \n'.format(converted_value) +
                          'The boolean value checked was:  {} \n'.format(the_boolean) +
                          'The string you typed was:  {} \n'.format(the_string) +
                          'The type of the first object you selected is:  {} \n'.format(the_selection_type) +
                          'The drop down item you selected is:  {}'.format(the_drop_down)
                          )
+
+        app = adsk.core.Application.get()
+        
+        # doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
+        
+        design = app.activeProduct
+
+         # Get the root component of the active design.
+        rootComp = design.rootComponent
+
+        # Create a new sketch on the xy plane.
+        sketches = rootComp.sketches
+
+        ao.ui.messageBox("Found {} sketches".format(len(sketches)))
 
     # Run when the user selects your command icon from the Fusion 360 UI
     # Typically used to create and display a command dialog box
